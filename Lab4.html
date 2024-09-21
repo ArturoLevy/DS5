@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laboratorio 4</title>
+</head>
+<body>
+    <h1>Escriba aquí:</h1>
+    <input type="text" class="inputText" placeholder="Escribe algo aquí...">
+    <p>Texto al revés: <span class="outputText"></span></p>
+
+    <script>
+
+        const inputField = document.querySelector('.inputText');
+        const outputSpan = document.querySelector('.outputText');
+
+        inputField.addEventListener('input', function() {
+
+            const inputValue = inputField.value;
+
+            const reversedText = inputValue.split('').reverse().join('');
+
+            outputSpan.textContent = reversedText;
+        });
+    </script>
+</body>
+</html>
