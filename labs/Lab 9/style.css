@@ -1,0 +1,223 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #031926;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+main > section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.form-group > input {
+    flex: 2;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+input, button {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+button.clear {
+    background-color: #f87171;
+    visibility: hidden;
+}
+
+button.clear:hover {
+    background-color: #ef4444;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-areas: 
+        "sprite details"
+        "evolutions abilities";
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.sprite {
+    grid-area: sprite;
+    text-align: left;
+
+}
+
+.details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.evolutions {
+    grid-area: evolutions;
+    text-align: left;
+}
+
+.abilities {
+    grid-area: abilities;
+    text-align: left;
+}
+
+.sprite img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    text-align: left;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 24px;
+    color: #3b82f6;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 19.2px;
+    color: #2563eb;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e0f7fa;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    color: #00796b;
+    text-align: left;
+}
+
+input[type="text"] {
+    background-color: #c2c0c0ce;
+}
+
+.Logo {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    align-content: center;
+}
+
+.subtitle {
+
+    text-align: left;
+}
+
+body {
+    padding-top: 10%;
+}
+
+section {
+    position: relative;
+    text-align: center;
+}
+
+/* p  {
+    text-align: left;
+    font-size: 16px;
+    color: #031926;
+    Font-weight: bold;
+    display: block;
+} */
+
+    
+
+.Busk {
+    text-align: left;
+    font-size: 16px;
+    color: #031926;
+    Font-weight: bold;    
+}
+
+.sek {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.TP {
+    font-size: 16px;
+    color: #031926;
+    Font-weight: bold;
+    margin-right: 5%;
+    margin-bottom: 5px;
+    
+}
+
+.gitLogo {
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 16px;
+}
+
+.hidden {
+    display: none;
+}
