@@ -45,7 +45,7 @@ const handlers = {
     clear: () => {
         htmlElements.input.value = '';
         htmlElements.details.innerHTML = '';
-        htmlElements.details.classList.add('hidden'); // Oculta el contenedor de resultados
+        htmlElements.details.classList.add('hidden');
         htmlElements.clearButton.style.visibility = 'hidden';
     },
     input: () => {
