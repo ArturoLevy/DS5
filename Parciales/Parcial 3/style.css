@@ -94,7 +94,8 @@ button.clear:hover {
 
 .sprite {
     grid-area: sprite;
-    text-align: center;
+    text-align: left;
+
 }
 
 .details {
@@ -102,20 +103,24 @@ button.clear:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
 }
 
 .evolutions {
     grid-area: evolutions;
+    text-align: left;
 }
 
 .abilities {
     grid-area: abilities;
+    text-align: left;
 }
 
 .sprite img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    text-align: left;
 }
 
 h2 {
@@ -123,12 +128,14 @@ h2 {
     font-size: 24px;
     color: #3b82f6;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 h3 {
     font-size: 19.2px;
     color: #2563eb;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 ul {
@@ -142,6 +149,7 @@ li {
     padding: 8px;
     border-radius: 4px;
     color: #00796b;
+    text-align: left;
 }
 
 input[type="text"] {
@@ -156,8 +164,10 @@ select {
     display: block;
     margin: 0 auto;
     position: absolute;
-    top: -50px;
-    left: 150px;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    align-content: center;
 }
 
 .subtitle {
@@ -169,6 +179,10 @@ body {
     padding-top: 10%;
 }
 
+section {
+    position: relative;
+    text-align: center;
+}
 
 /* p  {
     text-align: left;
@@ -200,9 +214,18 @@ body {
     margin-right: 5%;
     margin-bottom: 5px;
     
-} 
+}
 
-#pokemon-details {
+.gitLogo {
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 16px;
+}
 
-
+.hidden {
+    display: none;
 }

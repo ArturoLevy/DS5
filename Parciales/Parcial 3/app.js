@@ -20,11 +20,13 @@ const handlers = {
         }
 
         htmlElements.details.innerHTML = '';
+        htmlElements.details.classList.add('hidden'); // Oculta el contenedor de resultados
 
         if (searchType === 'pokemon') {
             const pokemon = await getPokemon(query);
             if (pokemon) {
                 renderPokemon(htmlElements.details, pokemon);
+                htmlElements.details.classList.remove('hidden'); // Muestra el contenedor de resultados
             } else {
                 alert('No se encontró el Pokémon. Por favor, verifique el nombre e intente nuevamente.');
             }
@@ -32,6 +34,7 @@ const handlers = {
             const abilityData = await getAbility(query);
             if (abilityData) {
                 renderAbility(htmlElements.details, abilityData);
+                htmlElements.details.classList.remove('hidden'); // Muestra el contenedor de resultados
             } else {
                 alert('No se encontró la habilidad. Por favor, verifique el nombre e intente nuevamente.');
             }
@@ -42,6 +45,7 @@ const handlers = {
     clear: () => {
         htmlElements.input.value = '';
         htmlElements.details.innerHTML = '';
+        htmlElements.details.classList.add('hidden'); // Oculta el contenedor de resultados
         htmlElements.clearButton.style.visibility = 'hidden';
     },
     input: () => {
