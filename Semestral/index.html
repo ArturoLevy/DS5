@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIExplorer</title>
+    <title>API Explorer</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
     <div class="container">
-  
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <h2>APIExplorer</h2>
+            <h2>API Explorer</h2>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -21,12 +22,12 @@
                 </ul>
             </nav>
             <div class="request-body">
-                <p>Request Body</p>
+                <p>Request Methods</p>
                 <ul>
                     <li>GET</li>
                     <li>POST</li>
-                    <li>Security</li>
                     <li>PUT</li>
+                    <li>DELETE</li>
                 </ul>
             </div>
             <div class="footer">
@@ -38,54 +39,31 @@
             </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="main-content">
             <header>
                 <input type="text" placeholder="Enter API endpoint" class="search-bar">
-                <button>Search</button>
-                <div class="user-profile">
-                    <span>HTTP</span>
+                <button class="btn-submit">Send Request</button>
+                <div class="method-selector">
+                    <select class="http-method">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
                 </div>
             </header>
 
-            <section class="welcome-section">
-                <h1>Welcome to APIExplorer</h1>
-                <p>Use the top bar to test your APIs.</p>
-                <button class="primary-button">Headers</button>
-                <div class="info-cards">
-                    <div class="card">Next steps<br><span>Learn more about APIs</span></div>
-                    <div class="card">Request body<br><span>API response section</span></div>
-                </div>
+            <section class="response-section">
+                <h1>Response</h1>
+                <textarea id="response-box" placeholder="API response will appear here..." readonly></textarea>
             </section>
 
-            <section class="tasks-section">
-                <h2>My tasks</h2>
-                <div class="tasks">
-                    <div class="task">API call<br><span>Test your API call</span></div>
-                    <div class="task">API call<br><span>Evaluate your API call</span></div>
-                    <div class="task">APIExp<br><span>API endpoint testing</span></div>
-                </div>
-                <button>All tasks</button>
-            </section>
-
-            <section class="events-section">
-                <h2>Upcoming events</h2>
-                <ul>
-                    <li>
-                        <span class="date">05</span>
-                        <span>API design review<br><small>8 of 12 sessions, Mr. Smith</small></span>
-                    </li>
-                    <li>
-                        <span class="date">06</span>
-                        <span>API security testing<br><small>8 of 12 sessions, Mr. Smith</small></span>
-                    </li>
-                    <li>
-                        <span class="date">07</span>
-                        <span>Team meeting<br><small>4 of 20 meetings, Engineering Team</small></span>
-                    </li>
-                </ul>
+            <section class="input-section">
+                <h2>Request Parameters</h2>
+                <textarea id="request-params" placeholder="Add your JSON body or parameters here..."></textarea>
             </section>
         </main>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
