@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Explorador</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <script defer src="../app/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Explorador de API</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">APIs</a></li>
+                    <li><a href="#">Endpoints</a></li>
+                    <li><a href="#">Parametros</a></li>
+                    <li><a href="#">Headers</a></li>
+                </ul>
+            </nav>
+            <div class="request-body">
+                <p>Metodos Disponibles</p>
+                <ul>
+                    <li>GET</li>
+                    <li>POST</li>
+                    <li>PUT</li>
+                    <li>DELETE</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <p>Explorador de APIs<br><a href="mailto:apiexplorer@email.com">apiexplorer@email.com</a></p>
+                <div class="settings">
+                    <a href="#">Settings</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-content-header">
+                <input type="text" placeholder="Enter API endpoint" class="search-bar">
+                <button class="btn-submit">Enviar Solicitud</button>
+                <div class="method-selector">
+                    <select class="http-method">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+            </header>
+
+            <section class="response-section">
+                <h1>Response</h1>
+                <textarea id="response-box" placeholder="API response will appear here..." readonly></textarea>
+            </section>
+
+            <section class="input-section">
+                <h2>Request Parameters</h2>
+                <textarea id="request-params" placeholder="Add your JSON body or parameters here..."></textarea>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
