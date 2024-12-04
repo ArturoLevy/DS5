@@ -177,3 +177,40 @@
     font-size: 1rem;
     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
 }
+
+/* Estilos generales para el select */
+#metodosApi {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: white; /* Para texto por defecto */
+    background-color: white; /* Por defecto */
+}
+
+/* Colores por método */
+.get {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.post {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.put {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.delete {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Estilo para la opción seleccionada */
+#api-method option:checked {
+    font-weight: bold;
+    background-color: white;
+}
