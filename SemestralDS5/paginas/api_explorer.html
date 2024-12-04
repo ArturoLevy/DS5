@@ -1,52 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Explorador</title>
-    <link rel="stylesheet" href="../estilos/api_explorer.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <script defer src="../app/app.js"></script>
 </head>
-<body class="api-explorer-body">
-    <header class="header-home">
-        <div class="title-home">
-            <img src="../icons/RAPITEST.png" alt="logo" class="title-img-home">
-        </div>
-        <nav class="options-home">
-            <ul>
-                <li><a href="inicio.html" class="no-decoration">Inicio</a></li>
-                <li><a href="api_explorer.html" class="no-decoration active">Explorador de APIs</a></li>
-                <li><a href="historial_solicitudes.html" class="no-decoration">Historial de Solicitudes</a></li>
-                <li><a href="documentacion.html" class="no-decoration">Documentación</a></li>
-                <li><a href="acerca.html" class="no-decoration">Acerca de Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-explorer">
-        <div class="explorer-container">
-            <div class="explorer-title">
-                <h1>Explorador de APIs</h1>
-                <p>Realiza solicitudes rápidas y eficaces a tus endpoints API favoritos.</p>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Explorador de API</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">APIs</a></li>
+                    <li><a href="#">Endpoints</a></li>
+                    <li><a href="#">Parametros</a></li>
+                    <li><a href="#">Headers</a></li>
+                </ul>
+            </nav>
+            <div class="request-body">
+                <p>Metodos Disponibles</p>
+                <ul>
+                    <li>GET</li>
+                    <li>POST</li>
+                    <li>PUT</li>
+                    <li>DELETE</li>
+                </ul>
             </div>
-            <div class="explorer-form">
-                <input type="text" placeholder="Introduce el endpoint de tu API" class="search-bar">
-                <select class="http-method">
-                    <option value="GET">GET</option>
-                    <option value="POST">POST</option>
-                    <option value="PUT">PUT</option>
-                    <option value="DELETE">DELETE</option>
-                </select>
+            <div class="footer">
+                <p>Explorador de APIs<br><a href="mailto:apiexplorer@email.com">apiexplorer@email.com</a></p>
+                <div class="settings">
+                    <a href="#">Settings</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-content-header">
+                <input type="text" placeholder="Enter API endpoint" class="search-bar">
                 <button class="btn-submit">Enviar Solicitud</button>
-            </div>
-            <div class="response-container">
-                <h2>Response</h2>
-                <textarea id="response-box" placeholder="La respuesta de la API aparecerá aquí..." readonly></textarea>
-            </div>
-            <div class="request-container">
+                <div class="method-selector">
+                    <select class="http-method">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+            </header>
+
+            <section class="response-section">
+                <h1>Response</h1>
+                <textarea id="response-box" placeholder="API response will appear here..." readonly></textarea>
+            </section>
+
+            <section class="input-section">
                 <h2>Request Parameters</h2>
-                <textarea id="request-params" placeholder="Agrega tu JSON o parámetros aquí..."></textarea>
-            </div>
-        </div>
-    </main>
-    <script src="../app/app.js"></script>
+                <textarea id="request-params" placeholder="Add your JSON body or parameters here..."></textarea>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
