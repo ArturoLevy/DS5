@@ -6,7 +6,7 @@
     <title>API Explorador</title>
     <link rel="stylesheet" href="../estilos/api_explorer.css">
 </head>
-<body class="api-explorer-body">
+<body class="body-home">
     <header class="header-home">
         <div class="title-home">
             <img src="../icons/RAPITEST.png" alt="logo" class="title-img-home">
@@ -23,13 +23,11 @@
     </header>
     <main class="main-explorer">
         <div class="explorer-container">
-            <div class="explorer-title">
-                <h1>Explorador de APIs</h1>
-                <p>Realiza solicitudes rápidas y eficaces a tus endpoints API favoritos.</p>
-            </div>
+            <h1 class="title-main-explorer">Explorador de APIs</h1>
+            <p class="subtitle-main-explorer">Realiza solicitudes rápidas y eficaces a tus endpoints API favoritos.</p>
             <div class="explorer-form">
-                <input type="text" placeholder="Introduce el endpoint de tu API" class="search-bar">
-                <select class="http-method">
+                <input type="text" placeholder="Introduce el endpoint de tu API" class="api-input">
+                <select class="api-method">
                     <option value="GET">GET</option>
                     <option value="POST">POST</option>
                     <option value="PUT">PUT</option>
@@ -39,13 +37,16 @@
             </div>
             <div class="response-container">
                 <h2>Response</h2>
-                <textarea id="response-box" placeholder="La respuesta de la API aparecerá aquí..." readonly></textarea>
+                <div class="response-box-wrapper">
+                    <textarea id="response-box" placeholder="La respuesta de la API aparecerá aquí..." readonly></textarea>
+                </div>
             </div>
             <div class="request-container">
                 <h2>Request Parameters</h2>
-                <textarea id="request-params" placeholder="Agrega tu JSON o parámetros aquí..."></textarea>
+                <div class="request-box-wrapper">
+                    <textarea id="request-params" placeholder="Agrega tu JSON o parámetros aquí..."></textarea>
+                </div>
             </div>
-        </div>
     </main>
     <script src="../app/app.js"></script>
 </body>

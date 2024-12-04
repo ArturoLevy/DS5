@@ -1,12 +1,10 @@
-.api-explorer-body {
+/* General Styles */
+.body-home {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .header-home {
@@ -55,93 +53,127 @@
     color: #ff7b00;
 }
 
-.main-explorer {
-    margin-top: 2rem;
+/* Explorer Container */
+.explorer-container {
+    background: linear-gradient(135deg, #ff7b00, #ffbb00); /* Fondo degradado */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
     width: 90%;
     max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.explorer-container {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 100%;
-}
-
-.explorer-title h1 {
+/* Titles */
+.title-main-explorer {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #ff7b00;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.explorer-title p {
-    font-size: 1rem;
+.subtitle-main-explorer {
+    font-size: 1.2rem;
+    color: #fff3e0;
+    text-align: center;
     margin-bottom: 2rem;
-    color: #555;
 }
 
+/* Form Styles */
 .explorer-form {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
     margin-bottom: 2rem;
 }
 
 .api-input {
     flex: 1;
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: none;
     background: #fff;
     color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .api-method {
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: none;
     background: #fff;
     color: #333;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn-submit {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
-    background-color: #ff7b00;
+    background: linear-gradient(90deg, #ff7b00, #e67e22);
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .btn-submit:hover {
-    background-color: #e67e22;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Response and Request Containers */
 .response-container,
 .request-container {
-    margin-top: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .response-container textarea,
 .request-container textarea {
     width: 100%;
     height: 150px;
-    background: #fff;
+    background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
-    color: #333;
-    padding: 0.5rem;
+    padding: 0.8rem;
     resize: none;
+    color: #333;
+    font-size: 1rem;
 }
 
 .response-container h2,
 .request-container h2 {
-    color: #ff7b00; 
+    color: #ff7b00;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+}
+
+/* Envolver el cuadro de texto en un div para mayor control */
+.response-box-wrapper,
+.request-box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Cuadro de respuesta */
+#response-box,
+#request-box {
+    width: 100%; /* Asegura que el ancho sea igual al contenedor */
+    height: 150px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.8rem;
+    resize: none;
+    color: #333;
+    font-size: 1rem;
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
 }

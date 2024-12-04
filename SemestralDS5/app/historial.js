@@ -1,33 +1,45 @@
 (function () {
-    const loadHistory = () => {
-        const historyTable = document.querySelector("#history-table tbody");
-        const historial = JSON.parse(localStorage.getItem("historial")) || [];
+    const App = (() => {
+        const loadHistory = () => {
+            const historyTable = document.querySelector("#history-table tbody");
+            const historial = JSON.parse(localStorage.getItem("historial")) || [];
 
-        historyTable.innerHTML = "";
 
-        historial.forEach((entrada) => {
-            const row = document.createElement("tr");
+            historyTable.innerHTML = "";
 
-            const metodoCell = document.createElement("td");
-            metodoCell.textContent = entrada.metodo;
+            historial.forEach((entrada) => {
+                const row = document.createElement("tr");
 
-            const urlCell = document.createElement("td");
-            urlCell.textContent = entrada.url;
+                const metodoCell = document.createElement("td");
+                metodoCell.textContent = entrada.metodo;
 
-            const estadoCell = document.createElement("td");
-            estadoCell.textContent = entrada.estado;
+                const urlCell = document.createElement("td");
+                urlCell.textContent = entrada.url;
 
-            const fechaCell = document.createElement("td");
-            fechaCell.textContent = entrada.fecha;
+                const estadoCell = document.createElement("td");
+                estadoCell.textContent = entrada.estado;
 
-            row.appendChild(metodoCell);
-            row.appendChild(urlCell);
-            row.appendChild(estadoCell);
-            row.appendChild(fechaCell);
+                const fechaCell = document.createElement("td");
+                fechaCell.textContent = entrada.fecha;
 
-            historyTable.appendChild(row);
-        });
-    };
+                row.appendChild(metodoCell);
+                row.appendChild(urlCell);
+                row.appendChild(estadoCell);
+                row.appendChild(fechaCell);
 
-    document.addEventListener("DOMContentLoaded", loadHistory);
+                historyTable.appendChild(row);
+            });
+        };
+
+        const init = () => {
+            loadHistory();
+            console.log("Historial cargado correctamente.");
+        };
+
+        return {
+            init,
+        };
+    })();
+
+    App.init();
 })();

@@ -1,15 +1,15 @@
 (function () {
     const App = (() => {
-        // Cache DOM elements
+     
         const searchBar = document.querySelector(".search-bar");
         const methodSelector = document.querySelector(".http-method");
         const sendButton = document.querySelector(".btn-submit");
         const requestBodyInput = document.querySelector("#request-params");
         const responseBox = document.querySelector("#response-box");
 
-        // Maneja la solicitud a la API
+
         const handleApiRequest = async () => {
-            responseBox.value = ""; // Limpia la respuesta previa
+            responseBox.value = ""; 
 
             const endpoint = searchBar.value.trim();
             const method = methodSelector.value;
@@ -20,7 +20,6 @@
                 return;
             }
 
-            // Validar JSON
             try {
                 if (requestBodyInput.value) {
                     body = JSON.parse(requestBodyInput.value);

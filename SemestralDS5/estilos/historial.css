@@ -60,7 +60,7 @@
     flex-direction: column;
     padding: 2rem;
     background-color: #f7f7f7;
-    min-height: calc(100vh - 120px); 
+   /* min-height: calc(100vh - 120px); */
 }
 
 .historial-container {
@@ -80,7 +80,6 @@
     margin-bottom: 1rem;
 }
 
-/* Tabla */
 #history-table {
     width: 100%;
     border-collapse: collapse;
@@ -115,6 +114,154 @@
 /* Texto */
 .main-historial p {
     font-size: 1rem;
-    color: #666;
+    color: #000000;
     margin-bottom: 1rem;
 }
+
+/* General Styles */
+.body-home {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #ff7b00;
+    padding: 1rem 0;
+}
+
+.title-home {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title-img-home {
+    height: 50px;
+}
+
+.options-home ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.options-home li {
+    margin: 0;
+}
+
+.options-home a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.options-home a:hover,
+.options-home a.active {
+    background-color: #ffffff;
+    color: #ff7b00;
+}
+
+/* Historial Container */
+.historial-container {
+    background: linear-gradient(135deg, #ff7b00, #ffbb00); /* Fondo degradado */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Title */
+.title-main-historial {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Table Styles */
+#history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#history-table thead {
+    background: #ff7b00; /* Fondo naranja para el encabezado */
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+#history-table th,
+#history-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#history-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Row Styles */
+#history-table tbody tr {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#history-table tbody tr:hover {
+    background-color: #ffe4b3; /* Color claro al hover */
+    transform: scale(1.02); /* Amplía ligeramente */
+}
+
+/* Icons for Methods */
+#history-table tbody td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#history-table tbody td:first-child::before {
+    content: attr(data-method);
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff7b00; /* Default color for methods */
+}
+
+#history-table tbody td:first-child[data-method="GET"]::before {
+    background-color: #2ecc71; /* Verde */
+}
+
+#history-table tbody td:first-child[data-method="POST"]::before {
+    background-color: #3498db; /* Azul */
+}
+
+#history-table tbody td:first-child[data-method="PUT"]::before {
+    background-color: #f1c40f; /* Amarillo */
+}
+
+#history-table tbody td:first-child[data-method="DELETE"]::before {
+    background-color: #e74c3c; /* Rojo */
+}
+

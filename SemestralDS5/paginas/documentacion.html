@@ -6,7 +6,7 @@
     <title>Documentación</title>
     <link rel="stylesheet" href="../estilos/documentacion.css">
 </head>
-<body class="body-home">
+<body class="body-documentacion">
     <header class="header-home">
         <div class="title-home">
             <img src="../icons/RAPITEST.png" alt="logo" class="title-img-home">
@@ -21,11 +21,107 @@
             </ul>
         </nav>
     </header>
-    <main class="main-home">
-        <h1 class="title-main-home">Documentación</h1>
-        <section class="documentation-content">
-            <p>Bienvenido a la sección de documentación. Aquí encontrarás guías y tutoriales para utilizar RAPITEST y realizar solicitudes API eficientemente.</p>
-        </section>
+    <main class="main-documentacion">
+        <div class="documentacion-container">
+            <h1 class="title-main-documentacion">Documentación</h1>
+            <section class="documentation-content">
+                <p>Bienvenido a la sección de documentación. Aquí encontrarás guías y tutoriales para utilizar RAPITEST y realizar solicitudes API eficientemente.</p>
+            </section>
+
+            <!-- Accordion Section -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Cómo utilizar RAPITEST
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>RAPITEST es una herramienta fácil de usar para probar APIs. Sigue estos pasos:</p>
+                        <ol>
+                            <li>Escribe el endpoint (URL) de tu API en el campo de texto proporcionado.</li>
+                            <li>Selecciona el método HTTP (GET, POST, PUT, DELETE) desde el menú desplegable.</li>
+                            <li>Si es necesario, escribe el cuerpo de la solicitud en formato JSON en el cuadro correspondiente.</li>
+                            <li>Presiona el botón "Enviar Solicitud" para obtener la respuesta de la API.</li>
+                            <li>Consulta el historial para revisar solicitudes anteriores.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Método GET
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>El método GET se utiliza para obtener datos de un servidor. Ejemplo:</p>
+                        <pre>
+URL: https://jsonplaceholder.typicode.com/posts
+Método: GET
+Respuesta esperada: Lista de publicaciones en formato JSON.
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Método POST
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>El método POST se utiliza para enviar datos a un servidor y crear un nuevo recurso. Ejemplo:</p>
+                        <pre>
+URL: https://jsonplaceholder.typicode.com/posts
+Método: POST
+Cuerpo:
+{
+    "title": "Nuevo post",
+    "body": "Este es el contenido del post.",
+    "userId": 1
+}
+Respuesta esperada: Un objeto JSON con el nuevo recurso creado.
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Método PUT
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>El método PUT se utiliza para actualizar recursos existentes en el servidor. Ejemplo:</p>
+                        <pre>
+URL: https://jsonplaceholder.typicode.com/posts/1
+Método: PUT
+Cuerpo:
+{
+    "id": 1,
+    "title": "Título actualizado",
+    "body": "Contenido actualizado.",
+    "userId": 1
+}
+Respuesta esperada: Un objeto JSON con los datos actualizados.
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Método DELETE
+                        <span class="arrow">&#9662;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>El método DELETE se utiliza para eliminar un recurso del servidor. Ejemplo:</p>
+                        <pre>
+URL: https://jsonplaceholder.typicode.com/posts/1
+Método: DELETE
+Respuesta esperada: Un objeto vacío {} indicando que el recurso fue eliminado.
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="../app/documentacion.js"></script>
 </body>
 </html>
