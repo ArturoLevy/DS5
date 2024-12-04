@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/style.css">
-    <title>RAPITEST</title>
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <title>Inicio - RAPITEST</title>
 </head>
 <body class="body-home">
     <header class="header-home">
         <div class="title-home">
             <img src="../icons/RAPITEST.png" alt="logo" class="title-img-home">
         </div>
-        <div class="options-home">
-            <h3><a href="api_explorer.html" class="no-decoration">Explorador de APIs</a></h3>
-            <h3><a href="documentacion.html" class="no-decoration">Documentacion</a></h3>
-            <h3><a href="historial_solicitudes.html" class="no-decoration">historial de Solicitudes</a></h3>
-            <h3><a href="acerca.html" class="no-decoration">acerca de nosotros</a></h3>
-        </div>
+        <nav class="options-home">
+            <ul>
+                <li><a href="inicio.html" class="no-decoration active">Inicio</a></li>
+                <li><a href="api_explorer.html" class="no-decoration">Explorador de APIs</a></li>
+                <li><a href="historial_solicitudes.html" class="no-decoration">Historial de Solicitudes</a></li>
+                <li><a href="documentacion.html" class="no-decoration">Documentación</a></li>
+                <li><a href="acerca.html" class="no-decoration">Acerca de Nosotros</a></li>
+            </ul>
+        </nav>
     </header>
     <main class="main-home">
-        <div>
-            <h3 class="title-main-home">Bienvenido! Aqui podras hacer test de tus APIs gratuitamente y rapido.</h3>        
+        <div class="welcome-container">
+            <h3 class="title-main-home">¡Bienvenido! Aquí podrás hacer pruebas de tus APIs gratuita y rápidamente.</h3>        
         </div>
-        <div>
-            <button class="btn-start"><a href="api_explorer.html" class="no-decoration">Presiona aqui para comenzar!</a></button>
+        <div class="start-container">
+            <button class="btn-start">
+                <a href="api_explorer.html" class="no-decoration">¡Presiona aquí para comenzar!</a>
+            </button>
         </div>
     </main>
 </body>

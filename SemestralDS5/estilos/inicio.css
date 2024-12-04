@@ -1,0 +1,104 @@
+/* Estilo general */
+.body-home {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+.header-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #ff7b00; /* Fondo naranja */
+    padding: 1rem 0;
+}
+
+.title-home {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title-img-home {
+    height: 50px;
+}
+
+/* Índice horizontal */
+.options-home ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.options-home li {
+    margin: 0;
+}
+
+.options-home a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.options-home a:hover,
+.options-home a.active {
+    background-color: #ffffff;
+    color: #ff7b00;
+}
+
+/* Fondo con GIF */
+.main-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 120px); /* Altura ajustada */
+    background-image: url(../icons/gif.webp); /* GIF de fondo */
+    background-position: center;
+    text-align: center;
+}
+
+/* Texto de bienvenida */
+.title-main-home {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #000; /* Texto blanco para contraste con el fondo */
+   /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+}
+
+/* Botón */
+.btn-start {
+    padding: 1rem 2rem;
+    border-radius: 50px; /* Botón redondeado */
+    background: linear-gradient(90deg, #ff7b00, #e67e22); /* Degradado naranja */
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-start:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-start a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}

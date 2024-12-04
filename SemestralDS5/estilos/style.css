@@ -213,3 +213,38 @@ body {
 .main-historial {
     margin: 17%;
 }
+
+
+/* Título principal */
+.title-about {
+    font-size: 2rem; /* Tamaño del título */
+    color: #333; /* Color gris oscuro */
+    margin: 20px 0 10px 20px; /* Separación del borde superior y del lado izquierdo */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Subtítulo para políticas */
+.subtitle-policies {
+    font-size: 1.5rem; /* Tamaño del subtítulo */
+    color: #ff7b00; /* Color naranja */
+    margin-top: 40px; /* Separación del contenido anterior */
+    margin-left: 20px; /* Separación del borde izquierdo */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Texto general */
+.about-text, .policies-text {
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    line-height: 1.15; /* Espaciado entre líneas */
+    color: #555; /* Color gris medio */
+    margin: 20px; /* Margen alrededor del texto */
+    text-align: justify; /* Justificación del texto */
+}
+
+/* Contenedor principal */
+.main-content {
+    padding: 20px; /* Espacio interno para evitar que el contenido toque los bordes */
+    background-color: #f7f7f7; /* Fondo claro para el contenido */
+    border-radius: 8px; /* Bordes redondeados para suavizar el diseño */
+}
