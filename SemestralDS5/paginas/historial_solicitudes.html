@@ -6,7 +6,7 @@
     <title>Historial de Solicitudes</title>
     <link rel="stylesheet" href="../estilos/historial.css">
 </head>
-<body>
+<body class="body-historial">
     <header class="header-home">
         <div class="title-home">
             <img src="../icons/RAPITEST.png" alt="logo" class="title-img-home">
@@ -21,22 +21,25 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Historial de Solicitudes</h1>
-        <table id="history-table">
-            <thead>
-                <tr>
-                    <th>Método</th>
-                    <th>URL</th>
-                    <th>Estado</th>
-                    <th>Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se llenará dinámicamente el historial -->
-            </tbody>
-        </table>
+    <main class="main-historial">
+        <div class="historial-container">
+            <h1 class="title-main-historial">Historial de Solicitudes</h1>
+            <p>Consulta las solicitudes realizadas recientemente y sus detalles:</p>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>URL</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Contenido generado dinámicamente -->
+                </tbody>
+            </table>
+        </div>
     </main>
-    <script src="../scripts/historial.js"></script>
+    <script src="../app/historial.js"></script>
 </body>
 </html>

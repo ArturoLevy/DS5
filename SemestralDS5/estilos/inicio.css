@@ -1,4 +1,3 @@
-/* Estilo general */
 .body-home {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,13 +9,12 @@
     align-items: center;
 }
 
-/* Encabezado */
 .header-home {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: #ff7b00; /* Fondo naranja */
+    background-color: #ff7b00;
     padding: 1rem 0;
 }
 
@@ -30,7 +28,6 @@
     height: 50px;
 }
 
-/* Índice horizontal */
 .options-home ul {
     list-style: none;
     display: flex;
@@ -58,32 +55,30 @@
     color: #ff7b00;
 }
 
-/* Fondo con GIF */
+
 .main-home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 120px); /* Altura ajustada */
-    background-image: url(../icons/gif.webp); /* GIF de fondo */
+    height: calc(100vh - 120px);
+    background-image: url(../icons/gif.webp); 
     background-position: center;
     text-align: center;
 }
 
-/* Texto de bienvenida */
+
 .title-main-home {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: #000; /* Texto blanco para contraste con el fondo */
-   /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+    color: #000;
 }
 
-/* Botón */
 .btn-start {
     padding: 1rem 2rem;
-    border-radius: 50px; /* Botón redondeado */
-    background: linear-gradient(90deg, #ff7b00, #e67e22); /* Degradado naranja */
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff7b00, #e67e22);
     color: white;
     border: none;
     font-size: 1.5rem;
@@ -93,7 +88,7 @@
 }
 
 .btn-start:hover {
-    transform: scale(1.1); /* Aumenta el tamaño en hover */
+    transform: scale(1.1);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 

@@ -1,19 +1,33 @@
 (function () {
-    const renderHistory = () => {
-        const historyTableBody = document.querySelector("#history-table tbody");
+    const loadHistory = () => {
+        const historyTable = document.querySelector("#history-table tbody");
         const historial = JSON.parse(localStorage.getItem("historial")) || [];
+
+        historyTable.innerHTML = "";
 
         historial.forEach((entrada) => {
             const row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${entrada.metodo}</td>
-                <td>${entrada.url}</td>
-                <td>${entrada.estado}</td>
-                <td>${entrada.fecha}</td>
-            `;
-            historyTableBody.appendChild(row);
+
+            const metodoCell = document.createElement("td");
+            metodoCell.textContent = entrada.metodo;
+
+            const urlCell = document.createElement("td");
+            urlCell.textContent = entrada.url;
+
+            const estadoCell = document.createElement("td");
+            estadoCell.textContent = entrada.estado;
+
+            const fechaCell = document.createElement("td");
+            fechaCell.textContent = entrada.fecha;
+
+            row.appendChild(metodoCell);
+            row.appendChild(urlCell);
+            row.appendChild(estadoCell);
+            row.appendChild(fechaCell);
+
+            historyTable.appendChild(row);
         });
     };
 
-    renderHistory();
+    document.addEventListener("DOMContentLoaded", loadHistory);
 })();
