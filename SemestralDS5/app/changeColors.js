@@ -1,4 +1,3 @@
-
 const colorsChanges = (() => {
 
     const htmlElements = {
@@ -16,3 +15,6 @@ const colorsChanges = (() => {
     htmlElements.select.addEventListener("change", funcChange)
     
 })();
+
+
+

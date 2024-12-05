@@ -1,8 +1,8 @@
 (function () {
     const App = (() => {
      
-        const searchBar = document.querySelector(".search-bar");
-        const methodSelector = document.querySelector(".http-method");
+        const searchBar = document.querySelector(".api-input");
+        const methodSelector = document.querySelector(".api-method");
         const sendButton = document.querySelector(".btn-submit");
         const requestBodyInput = document.querySelector("#request-params");
         const responseBox = document.querySelector("#response-box");

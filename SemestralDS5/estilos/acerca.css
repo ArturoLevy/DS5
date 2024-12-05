@@ -148,3 +148,184 @@
     transform: scale(1.1); /* Ampliar ligeramente */
     transition: all 0.3s ease;
 }
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .header-home {
+    background-color: #333; /* Fondo del encabezado oscuro */
+}
+
+body.dark-mode .options-home a {
+    color: #e0e0e0; /* Color de texto claro en los enlaces */
+}
+
+body.dark-mode .options-home a:hover,
+body.dark-mode .options-home a.active {
+    background-color: #555; /* Fondo oscuro para el hover y el activo */
+    color: #ff7b00; /* Color del texto en los enlaces activos */
+}
+
+/* Estilos para el contenedor principal */
+body.dark-mode .explorer-container {
+    background: linear-gradient(135deg, #333, #555); /* Fondo degradado oscuro */
+}
+
+body.dark-mode .title-main-explorer,
+body.dark-mode .subtitle-main-explorer {
+    color: #ffffff; /* Texto claro para los títulos */
+}
+
+
+.dark-mode .btn-start {
+    background: linear-gradient(90deg, #444444, #222222); /* Gradiente oscuro */
+    color: #f5f5f5; /* Texto claro */
+}
+
+.dark-mode .btn-start:hover {
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3); /* Efecto de sombra claro */
+}
+/* Botón de alternancia de modo oscuro */
+.btn-toggle-darkmode {
+    padding: 10px 20px;
+    background-color: white; /* Color de fondo del botón */
+    color: white; /* Texto blanco */
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el texto y el ícono */
+}
+
+/* Efecto de hover */
+.btn-toggle-darkmode:hover {
+    background-color: white; /* Fondo más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandar ligeramente */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Efecto al presionar */
+.btn-toggle-darkmode:active {
+    transform: scale(0.98); /* Reduce ligeramente el tamaño al hacer clic */
+}
+
+/* Icono (opcional, si decides agregar uno al botón) */
+.btn-toggle-darkmode .icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .btn-toggle-darkmode {
+    background-color: #444; /* Fondo oscuro */
+    color: #f5f5f5; /* Texto claro */
+}
+
+.dark-mode .btn-toggle-darkmode:hover {
+    background-color: #333; /* Fondo más oscuro en hover */
+}
+
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #ff7b00;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    color: #e67e22;
+}
+
+/* Estilos para el contenido del main en modo oscuro */
+body.dark-mode .main-acerca {
+    background-color: #121212; /* Fondo oscuro para el contenido */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .title-main-acerca {
+    color: #ffbb00; /* Color del título principal en modo oscuro */
+}
+
+body.dark-mode .about-content,
+body.dark-mode .policies-content {
+    color: #e0e0e0; /* Color de texto claro para los párrafos */
+}
+
+body.dark-mode .policies-box {
+    background: linear-gradient(135deg, #444, #666); /* Fondo degradado oscuro para las políticas */
+}
+
+body.dark-mode .policy-icon {
+    background: #333; /* Fondo oscuro para los iconos */
+    color: #ffbb00; /* Color de los iconos en modo oscuro */
+}
+
+body.dark-mode .policies-content ol li:hover .policy-icon {
+    background: #555; /* Fondo oscuro al hacer hover */
+    color: #ff7b00; /* Cambia el color del ícono en hover */
+}
+
+/* Estilos para el contenedor de Acerca en modo oscuro */
+body.dark-mode .acerca-container {
+    background-color: #2b2b2b; /* Fondo oscuro para el contenedor */
+    color: #e0e0e0; /* Texto claro para todo el contenedor */
+}
+
+/* Estilos para el contenido dentro del contenedor en modo oscuro */
+body.dark-mode .acerca-container .main-acerca {
+    background-color: #1f1f1f; /* Fondo oscuro dentro del main */
+    color: #e0e0e0; /* Texto claro dentro del main */
+}
+
+/* Estilos para los títulos dentro del contenedor en modo oscuro */
+body.dark-mode .acerca-container .title-main-acerca {
+    color: #ffbb00; /* Color dorado para los títulos */
+}
+
+/* Cambiar color de los párrafos dentro del contenedor */
+body.dark-mode .acerca-container .about-content,
+body.dark-mode .acerca-container .policies-content {
+    color: #e0e0e0; /* Color del texto claro */
+}
+
+/* Asegurarse de que las listas también cambien de color */
+body.dark-mode .acerca-container .policies-content ol li {
+    color: #e0e0e0; /* Color de los elementos de la lista */
+}
+
+/* Cambiar los iconos dentro del contenedor */
+body.dark-mode .acerca-container .policy-icon {
+    background: #333; /* Fondo oscuro para los iconos */
+    color: #ffbb00; /* Color de los iconos */
+}
+
+/* Cambiar el color de los elementos cuando se hace hover */
+body.dark-mode .acerca-container .policies-content ol li:hover .policy-icon {
+    background: #555; /* Fondo más claro al hacer hover */
+    color: #ff7b00; /* Color del icono en hover */
+}
+
+/* Asegurarse de que los enlaces dentro del contenedor sean visibles */
+body.dark-mode .acerca-container .about-content a,
+body.dark-mode .acerca-container .policies-content a {
+    color: #ffbb00; /* Color de los enlaces en modo oscuro */
+}
+
+/* Si hay algún contenedor o caja dentro de acerca-container, también se debe cambiar */
+body.dark-mode .acerca-container .policies-box {
+    background: #444; /* Fondo oscuro para las cajas dentro de acerca-container */
+}
+

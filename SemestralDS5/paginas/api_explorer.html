@@ -20,13 +20,15 @@
                 <li><a href="acerca.html" class="no-decoration">Acerca de Nosotros</a></li>
             </ul>
         </nav>
+        <!-- Botón para cambiar el modo -->
+        <button id="toggleDarkMode" class="dark-mode-toggle">🌙</button>
     </header>
     <main class="main-explorer">
         <div class="explorer-container">
             <h1 class="title-main-explorer">Explorador de APIs</h1>
             <p class="subtitle-main-explorer">Realiza solicitudes rápidas y eficaces a tus endpoints API favoritos.</p>
             <div class="explorer-form">
-                <input type="text" placeholder="Introduce el endpoint de tu API" class="api-input">
+                <input type="text" placeholder="Introduce el endpoint de tu API" class="api-input search-bar">
                 <select class="api-method" id="api-method">
                     <option value="GET" class="get">GET</option>
                     <option value="POST" class="post">POST</option>
@@ -36,19 +38,21 @@
                 <button class="btn-submit">Enviar Solicitud</button>
             </div>
             <div class="response-container">
-                <h2>Response</h2>
+                <h2>Respuesta</h2>
                 <div class="response-box-wrapper">
                     <textarea id="response-box" placeholder="La respuesta de la API aparecerá aquí..." readonly></textarea>
                 </div>
             </div>
             <div class="request-container">
-                <h2>Request Parameters</h2>
+                <h2>Parametros de Peticion</h2>
                 <div class="request-box-wrapper">
                     <textarea id="request-params" placeholder="Agrega tu JSON o parámetros aquí..."></textarea>
                 </div>
             </div>
+        </div>
     </main>
     <script src="../app/app.js"></script>
     <script src="../app/changeColors.js"></script>
+    <script src="../app/darkmode.js"></script>
 </body>
 </html>

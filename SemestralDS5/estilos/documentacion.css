@@ -94,15 +94,6 @@
     margin-bottom: 0.5rem;
 }
 
-/* General Styles */
-.body-documentacion {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
-}
-
 /* Accordion Styles */
 .accordion {
     margin-top: 2rem;
@@ -166,3 +157,255 @@
 .accordion-header.active:hover {
     background-color: #d35400; /* Color más oscuro si está abierto y hover */
 }
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #181818; /* Fondo oscuro */
+    color: #f7f7f7; /* Texto claro */
+}
+
+/* Encabezado en modo oscuro */
+body.dark-mode .header-home {
+    background-color: #333; /* Fondo oscuro para el encabezado */
+}
+
+body.dark-mode .options-home a {
+    color: #f7f7f7; /* Enlaces claros */
+}
+
+body.dark-mode .options-home a:hover,
+body.dark-mode .options-home a.active {
+    background-color: #555; /* Fondo de enlace al pasar el ratón */
+    color: #f7f7f7; /* Color de texto claro */
+}
+
+/* Estilos para el contenedor principal */
+body.dark-mode .documentacion-container {
+    background: #222; /* Fondo oscuro para el contenedor */
+    color: #f7f7f7; /* Texto claro */
+}
+
+/* Títulos en modo oscuro */
+body.dark-mode .title-main-documentacion {
+    color: #ff7b00; /* Color de título brillante */
+}
+
+/* Estilo del contenido */
+body.dark-mode .documentation-content {
+    color: #bbb; /* Texto ligeramente gris */
+}
+
+/* Accordion en modo oscuro */
+body.dark-mode .accordion-header {
+    background-color: #444; /* Fondo oscuro para el encabezado del acordeón */
+    color: #fff; /* Texto blanco */
+}
+
+body.dark-mode .accordion-header:hover {
+    background-color: #555; /* Fondo oscuro al pasar el mouse */
+}
+
+body.dark-mode .accordion-content {
+    background-color: #333; /* Fondo oscuro para el contenido */
+    color: #ddd; /* Texto claro */
+}
+
+body.dark-mode .accordion-content pre {
+    background-color: #1e1e1e; /* Fondo más oscuro para los bloques de código */
+    color: #f4f4f4; /* Texto claro */
+}
+
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #ff7b00;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    color: #e67e22;
+}
+
+/* Estilos generales del cuerpo en modo oscuro */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .header-home {
+    background-color: #333; /* Fondo del encabezado oscuro */
+}
+
+body.dark-mode .options-home a {
+    color: #e0e0e0; /* Color de texto claro en los enlaces */
+}
+
+body.dark-mode .options-home a:hover,
+body.dark-mode .options-home a.active {
+    background-color: #555; /* Fondo oscuro para el hover y el activo */
+    color: #ff7b00; /* Color del texto en los enlaces activos */
+}
+
+/* Estilos para el contenedor principal */
+body.dark-mode .explorer-container {
+    background: linear-gradient(135deg, #333, #555); /* Fondo degradado oscuro */
+}
+
+body.dark-mode .title-main-explorer,
+body.dark-mode .subtitle-main-explorer {
+    color: #ffffff; /* Texto claro para los títulos */
+}
+
+body.dark-mode .api-input,
+body.dark-mode .api-method,
+body.dark-mode .btn-submit {
+    background-color: #333; /* Fondo oscuro para los inputs y botones */
+    color: #e0e0e0; /* Texto claro para los inputs y botones */
+}
+
+body.dark-mode .response-container,
+body.dark-mode .request-container {
+    background: #444; /* Fondo oscuro para las cajas de respuesta y solicitud */
+    color: #e0e0e0; /* Texto claro dentro de las cajas */
+}
+
+body.dark-mode .response-box-wrapper,
+body.dark-mode .request-box-wrapper {
+    border-color: #555; /* Borde más oscuro para los cuadros */
+}
+
+body.dark-mode .get {
+    color: #4caf50; /* Color verde para el método GET */
+}
+
+body.dark-mode .post {
+    color: #2196f3; /* Color azul para el método POST */
+}
+
+body.dark-mode .put {
+    color: #ffeb3b; /* Color amarillo para el método PUT */
+}
+
+body.dark-mode .delete {
+    color: #f44336; /* Color rojo para el método DELETE */
+}
+
+/* Estilos para el botón de alternancia de modo oscuro */
+.btn-toggle-darkmode {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff7b00, #e67e22); /* Gradiente similar al .btn-start */
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el texto y el ícono */
+}
+
+/* Efecto de hover */
+.btn-toggle-darkmode:hover {
+    transform: scale(1.1); /* Efecto de agrandar el botón */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Efecto al presionar */
+.btn-toggle-darkmode:active {
+    transform: scale(0.98); /* Efecto al hacer clic */
+}
+
+/* Estilo para el icono dentro del botón (si se usa) */
+.btn-toggle-darkmode .icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .btn-toggle-darkmode {
+    background: linear-gradient(90deg, #444444, #222222); /* Gradiente oscuro */
+    color: #f5f5f5; /* Texto claro */
+}
+
+.dark-mode .btn-toggle-darkmode:hover {
+    background-color: #333; /* Fondo más oscuro en hover */
+}
+
+/* Estilos para el botón de alternancia de modo oscuro */
+.btn-toggle-darkmode {
+    padding: 0.5rem 1rem;  /* Reducción del tamaño del padding */
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff7b00, #e67e22); /* Gradiente similar al .btn-start */
+    color: white;
+    border: none;
+    font-size: 1rem;  /* Fuente más pequeña */
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el texto y el ícono */
+}
+
+/* Efecto de hover */
+.btn-toggle-darkmode:hover {
+    transform: scale(1.05); /* Efecto de agrandar ligeramente */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+}
+
+/* Efecto al presionar */
+.btn-toggle-darkmode:active {
+    transform: scale(0.98); /* Efecto al hacer clic */
+}
+
+/* Estilo para el icono dentro del botón (si se usa) */
+.btn-toggle-darkmode .icon {
+    width: 18px;  /* Tamaño más pequeño del icono */
+    height: 18px;
+    fill: white;
+}
+
+/* Estilos para el modo oscuro */
+
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #ff7b00;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    color: #e67e22;
+}
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro global */
+    color: #e0e0e0; /* Texto claro global */
+}
+
+/* Estilo de fondo para el contenedor principal en modo oscuro */
+body.dark-mode .main-documentacion {
+    background-color: #181818; /* Fondo oscuro para el contenedor principal */
+}
+
+/* Estilos adicionales para los elementos */
+body.dark-mode .documentacion-container {
+    background-color: #222; /* Fondo oscuro para el contenedor interno */
+    color: #f7f7f7; /* Texto claro */
+}
+
